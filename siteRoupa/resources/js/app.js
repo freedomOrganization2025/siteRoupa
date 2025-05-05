@@ -24,5 +24,5 @@ document.querySelector('.next').addEventListener('click', () => {
 
 function updateCarousel() {
   const itemWidth = produtos[0].offsetWidth + 20;
-  container.style.transform = `translateX(-${currentIndex * 200}px)`;
+  container.style.transform = `translateX(-${currentIndex * 220}px)`;
 }
