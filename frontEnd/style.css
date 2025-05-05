@@ -1,15 +1,3 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
 body {
     margin: 0;
     font-family: sans-serif;
@@ -21,20 +9,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000;
+    background: #222222;
     padding: 10px 15px;
   }
   
   .menu-icon {
     font-size: 24px;
   }
-  
-  .logo {
-    font-size: 18px;
-    font-weight: bold;
+  .logo{
+    align-self: center;
+    align-content: center;
   }
-  .logo span {
-    margin-left: 5px;
+  .logo img { 
+    width: 80%;
+    height: 80%;
+    align-content: center;
+    z-index: 1;
   }
   
   .icons {
@@ -47,18 +37,17 @@ body {
   
   .banner img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .banner {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh; /* Ou a altura que preferir */
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Isso coloca o banner atrás do conteúdo */
+
   }
   
   .produtos {
@@ -92,9 +81,9 @@ body {
   }
   
   .carousel-wrapper {
-    width: 660px; /* ou 100% com max-width */
+    width: 660px; 
     overflow: hidden;
-    margin: 0 auto; /* centraliza */
+    margin: 0 auto;
   }
   
   
