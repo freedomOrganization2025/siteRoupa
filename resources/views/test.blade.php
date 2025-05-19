@@ -20,7 +20,7 @@
       <input type="search" placeholder="O que você procura hoje?" class="search-box" />
       <div class="icons">
         <span class="icon heart"><i class='bx bx-heart' ></i></span>
-        <span class="icon user">Entrar / Cadastrar-se</span>
+        <span class="icon user"><a href="{{ route('login') }}">Entrar / Cadastrar-se</a> </span>
         <span class="icon cart"><i class='bx bx-cart-add' ></i><span class="badge">3</span></span>
       </div>
     </div>
