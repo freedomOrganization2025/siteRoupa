@@ -14,7 +14,8 @@
     <div class="background-layer"></div>
     
     <div class="login-box">
-        <form class="auth-form">
+        <form class="auth-form" method="POST" action="{{ route('registroDB') }}">
+            @csrf
             <div class="brand-header">
                 <img src="{{asset('images/lg.png')}}" class="brand-logo">
                 <h2>Knox Fit | Registrar</h2>
@@ -23,19 +24,19 @@
             <div class="input-group">
                 <div class="input-field">
                     <ion-icon name="person-outline" class="input-icon"></ion-icon>
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name='name' required>
                     <label for="name">Nome completo</label>
                 </div>
                 
                 <div class="input-field">
                     <ion-icon name="mail-outline" class="input-icon"></ion-icon>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name='email'required>
                     <label for="email">E-mail</label>
                 </div>
                 
                 <div class="input-field">
                     <ion-icon name="lock-closed-outline" class="input-icon"></ion-icon>
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name='password' required>
                     <label for="password">Senha</label>
                     <button type="button" class="toggle-password">
                         <ion-icon name="eye-outline"></ion-icon>
@@ -44,7 +45,7 @@
                 
                 <div class="input-field">
                     <ion-icon name="lock-closed-outline" class="input-icon"></ion-icon>
-                    <input type="password" id="confirm-password" required>
+                    <input type="password" id="confirm-password" name='password_confirmation' required>
                     <label for="confirm-password">Confirmar senha</label>
                     <button type="button" class="toggle-password">
                         <ion-icon name="eye-outline"></ion-icon>

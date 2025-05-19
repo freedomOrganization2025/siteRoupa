@@ -1,3 +1,15 @@
+const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+fetch('/rota', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-CSRF-TOKEN': token,
+  },
+  body: JSON.stringify(dados),
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Toggle password visibility for all password fields
     const togglePasswordButtons = document.querySelectorAll('.toggle-password');
